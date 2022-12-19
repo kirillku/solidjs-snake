@@ -1,7 +1,8 @@
 {
   "name": "solidjs-snake",
   "version": "0.0.0",
-  "description": "",
+  "description": "Snake game written with solidjs",
+  "homepage": "https://kirillku.github.io/solidjs-snake/",
   "scripts": {
     "start": "vite",
     "dev": "vite",
