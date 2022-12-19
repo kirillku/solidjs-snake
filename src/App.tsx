@@ -4,6 +4,7 @@ import styles from "./App.module.css";
 import { changeDirection, gameStatus, startGame } from "./engine";
 import { Direction, GameStatus } from "./types";
 import { Debug as Debug } from "./ui/Debug";
+import { GameControls } from "./ui/GameControls";
 import { GameField } from "./ui/GameField";
 
 const keyToDirection = (code: string): Direction | null => {
@@ -26,10 +27,6 @@ const handleKeydown = (e: KeyboardEvent) => {
 
   if (newDirection) {
     e.preventDefault();
-    if (gameStatus() !== GameStatus.PLAYING) {
-      startGame();
-    }
-
     changeDirection(newDirection);
   }
 };
@@ -44,12 +41,13 @@ const App: Component = () => {
   });
 
   return (
-    <div class={styles.App}>
+    <div>
       <header class={styles.header}>
         <h1>Snake Game</h1>
       </header>
       <main class={styles.main}>
         <GameField />
+        <GameControls />
         {import.meta.env.MODE === "development" && <Debug />}
       </main>
     </div>

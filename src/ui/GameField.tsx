@@ -72,7 +72,7 @@ const LooseView: Component = () => {
 };
 
 export const GameField: Component = () => {
-  const size = () => gameFieldSize() * 25;
+  const size = () => gameFieldSize() * 30;
   const sizeStyle = () => `width: ${size()}px; height: ${size()}px`;
 
   return (

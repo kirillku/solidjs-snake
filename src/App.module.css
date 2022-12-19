@@ -1,20 +1,12 @@
-.App {
-  background-color: #282c34;
-  color: white;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .header {
   text-align: center;
 }
 
 .main {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
   gap: 40px;
 }

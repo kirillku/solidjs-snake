@@ -78,6 +78,10 @@ const startGame = () => {
 };
 
 const changeDirection = (direction: Direction) => {
+  if (gameStatus() !== GameStatus.PLAYING) {
+    startGame();
+  }
+
   setDirection((currentDirection) =>
     getNextDirection(currentDirection, direction)
   );
