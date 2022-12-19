@@ -25,6 +25,7 @@ const handleKeydown = (e: KeyboardEvent) => {
   const newDirection = keyToDirection(e.code);
 
   if (newDirection) {
+    e.preventDefault();
     if (gameStatus() !== GameStatus.PLAYING) {
       startGame();
     }
