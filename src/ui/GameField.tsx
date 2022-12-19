@@ -48,7 +48,7 @@ const score = () => snake().length - 1;
 const WinView: Component = () => {
   return (
     <div>
-      <p>You win! 🎉</p>
+      <p>YOU WIN! 🎉</p>
       <p>
         Your score is: <strong>{score()}</strong>
       </p>
@@ -59,7 +59,7 @@ const WinView: Component = () => {
 const LooseView: Component = () => {
   return (
     <div>
-      <p>You loose! 🥲</p>
+      <p>YOU LOSE! 🥲</p>
       <p>
         Your score is: <strong>{score()}</strong>
       </p>
