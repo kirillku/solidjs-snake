@@ -17,6 +17,24 @@ const IdleView: Component = () => {
   );
 };
 
+const FOOD_EMOJIS = [
+  "🍒",
+  "🍓",
+  "🍑",
+  "🍔",
+  "🍰",
+  "🐓",
+  "🐀",
+  "🍇",
+  "🍗",
+  "🍕",
+  "🍅",
+];
+
+const getFoodEmoji = ([x, y]: Point): string => {
+  return FOOD_EMOJIS[((x + 1) * (y + 1)) % FOOD_EMOJIS.length];
+};
+
 const PlayingView: Component = () => {
   const range = () => Array.from({ length: gameFieldSize() }).map((_v, i) => i);
 
@@ -34,7 +52,7 @@ const PlayingView: Component = () => {
                   class={styles.cell}
                   style={isSnake() ? "background: #cbdf9b" : undefined}
                 >
-                  {isFood() && "🍒"}
+                  {isFood() && getFoodEmoji(currentPoint)}
                 </div>
               );
             }}
