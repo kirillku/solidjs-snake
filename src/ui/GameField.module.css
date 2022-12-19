@@ -1,5 +1,5 @@
 .field {
-  background: wheat;
+  background: #8da259;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,5 +16,5 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }

@@ -4,7 +4,7 @@ import { food, gameFieldSize, snake, direction, gameStatus } from "../engine";
 export const Debug: Component = () => {
   return (
     <code>
-      <pre style="color: white">
+      <pre>
         {JSON.stringify(
           {
             gameStatus: gameStatus(),

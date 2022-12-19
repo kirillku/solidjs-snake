@@ -7,7 +7,7 @@ import styles from "./GameField.module.css";
 const IdleView: Component = () => {
   return (
     <div>
-      <p>Welcome! 🐍</p>
+      <h2>Welcome! 🐍</h2>
       <p>Cilck any direction key to start</p>
       <p>
         <strong>WASD</strong> or <strong>HJKL</strong> or{" "}
@@ -30,9 +30,11 @@ const PlayingView: Component = () => {
               const isFood = () => isSamePoint(food(), currentPoint);
               const isSnake = () => includesPoint(snake(), currentPoint);
               return (
-                <div class={styles.cell}>
+                <div
+                  class={styles.cell}
+                  style={isSnake() ? "background: #cbdf9b" : undefined}
+                >
                   {isFood() && "🍒"}
-                  {isSnake() && "🟩"}
                 </div>
               );
             }}
@@ -48,10 +50,11 @@ const score = () => snake().length - 1;
 const WinView: Component = () => {
   return (
     <div>
-      <p>YOU WIN! 🎉</p>
+      <h2>YOU WIN! 🎉</h2>
       <p>
         Your score is: <strong>{score()}</strong>
       </p>
+      <p>Cilck any direction key to start again</p>
     </div>
   );
 };
@@ -59,10 +62,11 @@ const WinView: Component = () => {
 const LooseView: Component = () => {
   return (
     <div>
-      <p>YOU LOSE! 🥲</p>
+      <h2>YOU LOSE! 🥲</h2>
       <p>
         Your score is: <strong>{score()}</strong>
       </p>
+      <p>Cilck any direction key to start again</p>
     </div>
   );
 };
