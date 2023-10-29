@@ -2,6 +2,8 @@
 
 Snake game written with solidjs
 
+DEMO: [solidjs-snake](https://kirillku.github.io/solidjs-snake/)
+
 ## Available Scripts
 
 In the project directory, you can run:
